@@ -9,6 +9,16 @@ public class Student {
     private String email;
     private String profile;
 
+    public String getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
+    }
+
+    private String cardId;
+
     public String getCardID() {
         return cardID;
     }
