@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UI {
-    private static StudentController studentController
+    private static final StudentController studentController
             = new StudentController();
     private static StudentCreateDto insertStudentData(){
         System.out.println("[+] Create user feature");
@@ -26,11 +26,11 @@ public class UI {
         String pass = new Scanner(System.in).nextLine();
         System.out.println("[+] Insert birth of date: YYY-MMM-DD");
         System.out.print("[+] Insert year: ");
-        Integer year = new Scanner(System.in).nextInt();
+        int year = new Scanner(System.in).nextInt();
         System.out.print("[+] Insert month: ");
-        Integer month = new Scanner(System.in).nextInt();
+        int month = new Scanner(System.in).nextInt();
         System.out.print("[+] Insert day: ");
-        Integer day = new Scanner(System.in).nextInt();
+        int day = new Scanner(System.in).nextInt();
         LocalDate bod = LocalDate.of(year,month,day);
         return new StudentCreateDto(name,email,pass,bod);
     }
@@ -67,7 +67,7 @@ public class UI {
         System.out.print(">> Press Enter to continue...");
         new Scanner(System.in).nextLine();
     }
-    public static void getUI(){
+    public static void getUI (){
         while (true){
             thumbnail();
             System.out.print("[+] Insert option: ");
